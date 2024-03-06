@@ -10,7 +10,9 @@ function Directors() {
     .catch(error => console.error(error))
   }, [])
     const directorList = directors.map(director => {
+    
       return (
+
         <article key={director.id}>
             <h2>{director.name}</h2>
             <ul>

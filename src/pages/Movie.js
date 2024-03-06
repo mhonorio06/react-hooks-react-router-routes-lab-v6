@@ -15,12 +15,7 @@ function Movie() {
     if(!movies.title) {
       return <h1>Loading...</h1>
     }
-    const genres = movies.genres.map(genre => {
-      return (
-        <span key={genre.id}>{genre}</span>
-
-      )
-    })
+ 
   return (
     <>
       <header>
@@ -28,8 +23,10 @@ function Movie() {
       </header>
       <main>
         <h1>{movies.title}</h1>
-        <p>{movies.time}</p>
-        {genres}
+        <p>Running Time : {movies.time}</p>
+        <span>{movies.genres[0]}</span>
+        <span>{movies.genres[1]}</span>
+        <span>{movies.genres[2]}</span>
 
       </main>
     </>
